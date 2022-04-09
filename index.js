@@ -3,12 +3,12 @@ let CONTRAST = 200;
 let FPS = 5;
 
 let INVERT = false;
-let MATRIX = true;
+let MATRIX = false;
 
 document.addEventListener("DOMContentLoaded", (e) => {
   console.log(`Document is ready!`);
-  // startSketch(new CameraEffect());
-  startSketch(new MatrixEffect());
+  startSketch(new CameraEffect());
+  // startSketch(new MatrixEffect());
 });
 
 let effect;

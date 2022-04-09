@@ -89,7 +89,8 @@ class MatrixEffect {
       3;
 
     if (INVERT) {
-      return avg < 255 - CONTRAST ? avg : opacity / 4;
+      return avg + CONTRAST / 4 > 255 ? 255 : avg + CONTRAST / 4;
+      // return avg < 255 - CONTRAST ? avg : opacity / 4;
     } else {
       return avg < 255 - CONTRAST ? 255 - avg : opacity / 4;
     }
