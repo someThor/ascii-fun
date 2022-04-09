@@ -54,8 +54,9 @@ class CameraEffect {
   }
 
   static staticRenderChar(x, y, avg) {
+    avg = avg + CONTRAST / 4 > 255 ? 255 : avg + CONTRAST / 4;
     const charIndex = Math.floor(
-      map(avg, 0, CONTRAST, CameraEffect.density.length, 0)
+      map(avg, 0, 255, CameraEffect.density.length, 0)
     );
     if (INVERT) {
       fill(0, 255, 70, 255);
